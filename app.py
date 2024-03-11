@@ -18,6 +18,13 @@ def result():
     t = request.form.get("t")
     result = TextBlob(t).sentiment
     return(render_template("result.html",result=result))
+    
+    @app.route("/register",methods=["GET","POST"])
+def register():
+    name = request.form.get("t")
+    
+    return(render_template("register.html",result=result))
+
 
 @app.route("/next", methods=["GET","POST"])
 def next():
